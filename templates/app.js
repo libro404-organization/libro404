@@ -300,22 +300,19 @@ let books = [
         pages: 264
     }
 ];
+let btn1 = document.getElementById('btnSubmit')
 
-books.push(
-    {
-        title: "El perfume: historia de un asesino",
-        author: "Patrick Süskind",
-        genre: "Ficción",
-        language: "Español",
-        price: 53175,
-        format: "Físico",
-        isbn: "978-843-2217509",
-        description: "La historia de Jean-Baptiste Grenouille, un asesino obsesionado por el olor perfecto.",
-        condition: "Nuevo",
-        location: "Librería Grenouille",
-        publication_date: "1985-01-01",
-        publisher: "Seix Barral",
-        pages: 264
-    }
-)
-console.log(books)
+btn1.addEventListener('click', sumbit) 
+
+function sumbit() {
+
+let inpTitle = document.getElementById('title')
+
+    books.push(
+        {
+        title: inpTitle
+        }
+    ) 
+}
+
+console.log(books);
