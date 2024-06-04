@@ -1,4 +1,4 @@
-let libros = [
+let books = [
     {
         title: "Cien años de soledad",
         author: "Gabriel García Márquez",
