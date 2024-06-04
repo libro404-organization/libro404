@@ -1,4 +1,4 @@
-let libros = [
+let books = [
     {
         title: "Cien años de soledad",
         author: "Gabriel García Márquez",
@@ -300,3 +300,22 @@ let libros = [
         pages: 264
     }
 ];
+
+books.push(
+    {
+        title: "El perfume: historia de un asesino",
+        author: "Patrick Süskind",
+        genre: "Ficción",
+        language: "Español",
+        price: 53175,
+        format: "Físico",
+        isbn: "978-843-2217509",
+        description: "La historia de Jean-Baptiste Grenouille, un asesino obsesionado por el olor perfecto.",
+        condition: "Nuevo",
+        location: "Librería Grenouille",
+        publication_date: "1985-01-01",
+        publisher: "Seix Barral",
+        pages: 264
+    }
+)
+console.log(books)
