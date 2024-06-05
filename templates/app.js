@@ -1,4 +1,4 @@
-let libros = [
+let books = [
     {
         title: "Cien años de soledad",
         author: "Gabriel García Márquez",
@@ -300,3 +300,14 @@ let libros = [
         pages: 264
     }
 ];
+
+let btnAZ = document.getElementById('btnAz') 
+let catalogueAz = document.getElementById('Catalogue')
+
+btnAZ.addEventListener('click', books.sort((a, b) => {
+    return a.title.localeCompare(b.title);
+}))
+
+function CatalogueAAZZ(catalogueAz) {
+    catalogueAz.textContent = 'hola'
+}
