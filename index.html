@@ -3,15 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
- <link rel="stylesheet" href="css.css">
+    <title>Modificar Publisher</title>
 </head>
 <body>
-    
-    <input type="text" id="textInput" placeholder="Ingresa el nuevo texto">
-    <button onclick="modificarTexto()">cambiar editorial</button>
-    <p id="textOriginal">Texto original</p>
+    <div>
+        <label for="bookSelect">Seleccionar Libro:</label>
+        <select id="bookSelect">
+            <!-- Generar opciones de libros desde JavaScript -->
+        </select>
+        <br>
+        <label for="nuevoPublisherInput">Nuevo editor:</label>
+        <input type="text" id="nuevoPublisherInput">
+        <button onclick="modificarPublisher()">Modificar editor</button>
+    </div>
 
-    <script src="script.js"></script>
+    <div id="cambioHecho">
+        <!-- Aquí se mostrará el cambio realizado -->
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
