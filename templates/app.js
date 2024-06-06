@@ -304,10 +304,43 @@ let books = [
 let btnAZ = document.getElementById('btnAz') 
 let catalogueAz = document.getElementById('Catalogue')
 
-btnAZ.addEventListener('click', books.sort((a, b) => {
-    return a.title.localeCompare(b.title);
-}))
+btnAZ.addEventListener('click', submit)
 
-function CatalogueAAZZ(catalogueAz) {
-    catalogueAz.textContent = 'hola'
+let body = document.getElementById('body')
+
+listBooks(books)
+
+function listBooks(books) {
+    books.forEach(myBook => {
+      createBook(myBook)
+    });
+  }
+  
+  function createBook(book) {
+    let myBook = document.createElement('div')
+    myBook.classList.add('book')
+  
+    let title = document.createElement('h2')
+    title.textContent = book.title
+  
+    let description = document.createElement('p')
+    description.textContent = book.description
+  
+    myBook.appendChild(title)
+    myBook.appendChild(description)
+  
+    body.appendChild(myBook)
+  
+  }
+
+function submit() {
+    books.sort((a, b) => {
+        return a.title.localeCompare(b.title);
+    })
+    addCatalogue()
+}
+
+function addCatalogue() {
+    body.innerHTML = '';
+    listBooks(books)
 }
