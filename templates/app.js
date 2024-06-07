@@ -323,12 +323,16 @@ function listBooks(books) {
     let title = document.createElement('h2')
     title.textContent = book.title
   
-    let description = document.createElement('p')
-    description.textContent = book.description
-  
+    let author = document.createElement('h3')
+    author.textContent = book.author
+
+    let price = document.createElement('h3')
+    price.textContent = `$ ${book.price}`
+
     myBook.appendChild(title)
-    myBook.appendChild(description)
-  
+    myBook.appendChild(author)
+    myBook.appendChild(price)
+    
     body.appendChild(myBook)
   
   }
