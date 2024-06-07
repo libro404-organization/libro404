@@ -310,7 +310,7 @@ function show() {
     books.sort((a, b) => b.price - a.price)
 
     let slicebook = books.slice(0, 5)
-
+    
     listBooks(slicebook)
 }
 
