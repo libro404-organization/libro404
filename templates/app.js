@@ -303,10 +303,9 @@ let books = [
 
 let btnAZ = document.getElementById('btnAz') 
 let catalogueAz = document.getElementById('Catalogue')
+let body = document.getElementById('body')
 
 btnAZ.addEventListener('click', submit)
-
-let body = document.getElementById('body')
 
 listBooks(books)
 
