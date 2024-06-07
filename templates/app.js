@@ -300,3 +300,49 @@ let books = [
         pages: 264
     }
 ];
+
+
+//const books1 = [
+    // Aquí va la array de libros que proporcionaste
+//];
+
+const searchInput = document.getElementById('searchInput');
+const bookList = document.getElementById('bookList');
+
+function displayBooks(books) {
+    bookList.innerHTML = '';
+    books.forEach(book => {
+        const bookDiv = document.createElement('div');
+        bookDiv.classList.add('book');
+        bookDiv.innerHTML = `
+            <h2>${book.title}</h2>
+            <p>Autor: ${book.author}</p>
+            <p>Género: ${book.genre}</p>
+            <p>Idioma: ${book.language}</p>
+            <p>Precio: ${book.price}</p>
+            <p>Formato: ${book.format}</p>
+            <p>ISBN: ${book.isbn}</p>
+            <p>Descripción: ${book.description}</p>
+            <p>Condición: ${book.condition}</p>
+            <p>Ubicación: ${book.location}</p>
+            <p>Fecha de publicación: ${book.publication_date}</p>
+            <p>Editorial: ${book.publisher}</p>
+            <p>Páginas: ${book.pages}</p>
+        `;
+        bookList.appendChild(bookDiv);
+    });
+}
+
+displayBooks(books);
+
+searchInput.addEventListener('input', () => {
+    const searchTerm = searchInput.value.toLowerCase();
+    const filteredBooks = books.filter(book =>
+        book.title.toLowerCase().includes(searchTerm) ||
+        book.author.toLowerCase().includes(searchTerm) ||
+        book.genre.toLowerCase().includes(searchTerm) ||
+        book.language.toLowerCase().includes(searchTerm) ||
+        book.publisher.toLowerCase().includes(searchTerm)
+    );
+    displayBooks(filteredBooks);
+});
