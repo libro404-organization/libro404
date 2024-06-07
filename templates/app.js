@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function() {
 let books = [
     {
         title: "Cien años de soledad",
@@ -302,9 +303,6 @@ let books = [
 ];
 
 
-//const books1 = [
-    // Aquí va la array de libros que proporcionaste
-//];
 
 const searchInput = document.getElementById('searchInput');
 const bookList = document.getElementById('bookList');
@@ -320,20 +318,15 @@ function displayBooks(books) {
             <p>Género: ${book.genre}</p>
             <p>Idioma: ${book.language}</p>
             <p>Precio: ${book.price}</p>
-            <p>Formato: ${book.format}</p>
-            <p>ISBN: ${book.isbn}</p>
-            <p>Descripción: ${book.description}</p>
-            <p>Condición: ${book.condition}</p>
-            <p>Ubicación: ${book.location}</p>
-            <p>Fecha de publicación: ${book.publication_date}</p>
             <p>Editorial: ${book.publisher}</p>
-            <p>Páginas: ${book.pages}</p>
+           
         `;
         bookList.appendChild(bookDiv);
     });
 }
 
-displayBooks(books);
+// Remover esta línea
+// displayBooks(books);
 
 searchInput.addEventListener('input', () => {
     const searchTerm = searchInput.value.toLowerCase();
@@ -345,4 +338,5 @@ searchInput.addEventListener('input', () => {
         book.publisher.toLowerCase().includes(searchTerm)
     );
     displayBooks(filteredBooks);
+});
 });
