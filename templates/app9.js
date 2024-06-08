@@ -314,14 +314,12 @@ function showMediumPrice() {
         books.forEach(book => {
         if (book.price >= 30000 && book.price <= 80000) {
             booksPrice = true
-             console.log(booksPrice);
+        }
+        if (booksPrice == true) {
+            createBook(book)
         }
     }) 
-    if (booksPrice == true) {
-        books.forEach(myBook => { 
-            createBook(myBook)
-        })
-    }
+   
 }
 
 
