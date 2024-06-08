@@ -326,7 +326,7 @@ function listBooks(books) {
     author.textContent = book.author
 
     let price = document.createElement('h3')
-    price.textContent = `$ ${book.price}`
+    price.textContent = `precio: $ ${book.price}`
 
     myBook.appendChild(title)
     myBook.appendChild(author)
