@@ -302,10 +302,11 @@ let books = [
 ];
 
 let btnAZ = document.getElementById('btnAz') 
+let btnZA = document.getElementById('btnZa') 
 let catalogueAz = document.getElementById('Catalogue')
-let body = document.getElementById('body')
 
 btnAZ.addEventListener('click', submit)
+btnZA.addEventListener('click', submitZa)
 
 listBooks(books)
 
@@ -316,7 +317,7 @@ function listBooks(books) {
   }
   
   function createBook(book) {
-    let myBook = document.createElement('div')
+    let myBook = document.createElement('catalogueAz')
     myBook.classList.add('book')
   
     let title = document.createElement('h2')
@@ -332,7 +333,7 @@ function listBooks(books) {
     myBook.appendChild(author)
     myBook.appendChild(price)
     
-    body.appendChild(myBook)
+    catalogueAz.appendChild(myBook)
   
   }
 
@@ -343,7 +344,14 @@ function submit() {
     addCatalogue()
 }
 
+function submitZa() {
+    books.sort((a, b) => {
+        return b.title.localeCompare(a.title);
+    })
+    addCatalogue()
+}
+
 function addCatalogue() {
-    body.innerHTML = '';
+    catalogueAz.innerHTML = '';
     listBooks(books)
 }
