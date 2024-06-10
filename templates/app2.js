@@ -307,7 +307,7 @@ let books = [
 const searchInput = document.getElementById('searchInput');
 const bookList = document.getElementById('bookList');
 
-function displayBooks(books) {
+function ShowBooks(books) {
     bookList.innerHTML = '';
     books.forEach(book => {
         const bookDiv = document.createElement('div');
@@ -318,6 +318,7 @@ function displayBooks(books) {
             <p>Género: ${book.genre}</p>
             <p>Idioma: ${book.language}</p>
             <p>Precio: ${book.price}</p>
+            <p>Isbn: ${book.isbn}</p>
             <p>Editorial: ${book.publisher}</p>
            
         `;
@@ -325,8 +326,6 @@ function displayBooks(books) {
     });
 }
 
-// Remover esta línea
-// displayBooks(books);
 
 searchInput.addEventListener('input', () => {
     const searchTerm = searchInput.value.toLowerCase();
@@ -337,6 +336,7 @@ searchInput.addEventListener('input', () => {
         book.language.toLowerCase().includes(searchTerm) ||
         book.publisher.toLowerCase().includes(searchTerm)
     );
-    displayBooks(filteredBooks);
+    ShowBooks(filteredBooks);
 });
 });
+
