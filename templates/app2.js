@@ -304,39 +304,45 @@ let books = [
 
 
 
-const searchInput = document.getElementById('searchInput');
-const bookList = document.getElementById('bookList');
 
-function ShowBooks(books) {
-    bookList.innerHTML = '';
-    books.forEach(book => {
-        const bookDiv = document.createElement('div');
-        bookDiv.classList.add('book');
-        bookDiv.innerHTML = `
-            <h2>${book.title}</h2>
-            <p>Autor: ${book.author}</p>
-            <p>Género: ${book.genre}</p>
-            <p>Idioma: ${book.language}</p>
-            <p>Precio: ${book.price}</p>
-            <p>Isbn: ${book.isbn}</p>
-            <p>Editorial: ${book.publisher}</p>
-           
-        `;
-        bookList.appendChild(bookDiv);
+
+    const searchInput = document.getElementById('searchInput');
+    const bookList = document.getElementById('bookList');
+
+    function ShowBooks(books) {
+        bookList.innerHTML = '';
+        books.forEach(book => {
+            const bookDiv = document.createElement('div');
+            bookDiv.classList.add('book');
+            bookDiv.innerHTML = `
+                <h2>${book.title}</h2>
+                <p>Autor: ${book.author}</p>
+                <p>Género: ${book.genre}</p>
+                <p>Idioma: ${book.language}</p>
+                <p>Precio: ${book.price}</p>
+                <p>Isbn: ${book.isbn}</p>
+                <p>Editorial: ${book.publisher}</p>
+                <button class="remove-btn">Eliminar</button>
+            `;
+            bookList.appendChild(bookDiv);
+
+            const removeBtn = bookDiv.querySelector('.remove-btn');
+            removeBtn.addEventListener('click', () => {
+                bookDiv.remove();
+            });
+        });
+    }
+
+    searchInput.addEventListener('input', () => {
+        const searchTerm = searchInput.value.toLowerCase();
+        const filteredBooks = books.filter(book =>
+            book.title.toLowerCase().includes(searchTerm) ||
+            book.author.toLowerCase().includes(searchTerm) ||
+            book.genre.toLowerCase().includes(searchTerm) ||
+            book.language.toLowerCase().includes(searchTerm) ||
+            book.publisher.toLowerCase().includes(searchTerm)
+        );
+        ShowBooks(filteredBooks);
     });
-}
-
-
-searchInput.addEventListener('input', () => {
-    const searchTerm = searchInput.value.toLowerCase();
-    const filteredBooks = books.filter(book =>
-        book.title.toLowerCase().includes(searchTerm) ||
-        book.author.toLowerCase().includes(searchTerm) ||
-        book.genre.toLowerCase().includes(searchTerm) ||
-        book.language.toLowerCase().includes(searchTerm) ||
-        book.publisher.toLowerCase().includes(searchTerm)
-    );
-    ShowBooks(filteredBooks);
-});
 });
 
