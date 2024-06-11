@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function() {
 let books = [
     {
         title: "Cien años de soledad",
@@ -12,9 +13,7 @@ let books = [
         location: "Librería Don Quijote",
         publication_date: "1967-05-30",
         publisher: "Sudamericana",
-        pages: 432,
-        stock: 10
-
+        pages: 432
     },
     {
         title: "Harry Potter y la piedra filosofal",
@@ -29,10 +28,7 @@ let books = [
         location: "Librería Hogwarts",
         publication_date: "1997-06-26",
         publisher: "Salamandra",
-        pages: 256,
-        stock: 10
-
-        
+        pages: 256
     },
     {
         title: "1984",
@@ -47,9 +43,7 @@ let books = [
         location: "Librería Orwell",
         publication_date: "1949-06-08",
         publisher: "Debolsillo",
-        pages: 368,
-        stock: 10
-
+        pages: 368
     },
     {
         title: "Orgullo y prejuicio",
@@ -64,9 +58,7 @@ let books = [
         location: "Librería Austen",
         publication_date: "1813-01-28",
         publisher: "Penguin Clásicos",
-        pages: 416,
-        stock: 10
-
+        pages: 416
     },
     {
         title: "El Hobbit",
@@ -81,9 +73,7 @@ let books = [
         location: "Librería Rivendel",
         publication_date: "1937-09-21",
         publisher: "Minotauro",
-        pages: 304,
-        stock: 10
-
+        pages: 304
     },
     {
         title: "El código Da Vinci",
@@ -98,9 +88,7 @@ let books = [
         location: "Librería Da Vinci",
         publication_date: "2003-03-18",
         publisher: "Umbriel",
-        pages: 592,
-        stock: 10
-
+        pages: 592
     },
     {
         title: "Matar a un ruiseñor",
@@ -115,9 +103,7 @@ let books = [
         location: "Librería Finch",
         publication_date: "1960-07-11",
         publisher: "HarperCollins",
-        pages: 416,
-        stock: 10
-
+        pages: 416
     },
     {
         title: "El alquimista",
@@ -132,9 +118,7 @@ let books = [
         location: "Librería Santiago",
         publication_date: "1988-09-01",
         publisher: "Rayo",
-        pages: 208,
-        stock: 10
-
+        pages: 208
     },
     {
         title: "Los pilares de la tierra",
@@ -149,9 +133,7 @@ let books = [
         location: "Librería Kingsbridge",
         publication_date: "1989-10-02",
         publisher: "Plaza & Janés",
-        pages: 1200,
-        stock: 10
-
+        pages: 1200
     },
     {
         title: "La sombra del viento",
@@ -166,9 +148,7 @@ let books = [
         location: "Librería Sempere",
         publication_date: "2001-04-01",
         publisher: "Planeta",
-        pages: 576,
-        stock: 10
-
+        pages: 576
     },
     {
         title: "El principito",
@@ -183,9 +163,7 @@ let books = [
         location: "Librería Asteroide B-612",
         publication_date: "1943-04-06",
         publisher: "Salamandra",
-        pages: 96,
-        stock: 10
-
+        pages: 96
     },
     {
         title: "Crónica de una muerte anunciada",
@@ -200,9 +178,7 @@ let books = [
         location: "Librería Santiago Nasar",
         publication_date: "1981-11-25",
         publisher: "Literatura Random House",
-        pages: 128,
-        stock: 10
-
+        pages: 128
     },
     {
         title: "La ciudad y los perros",
@@ -217,9 +193,7 @@ let books = [
         location: "Librería Leoncio Prado",
         publication_date: "1962-10-29",
         publisher: "Punto de Lectura",
-        pages: 416,
-        stock: 10
-
+        pages: 416
     },
     {
         title: "El nombre del viento",
@@ -234,9 +208,7 @@ let books = [
         location: "Librería Eolian",
         publication_date: "2007-03-27",
         publisher: "Plaza & Janés",
-        pages: 896,
-        stock: 10
-
+        pages: 896
     },
     {
         title: "Don Quijote de la Mancha",
@@ -251,9 +223,7 @@ let books = [
         location: "Librería La Mancha",
         publication_date: "1605-01-16",
         publisher: "Ediciones Cátedra",
-        pages: 1056,
-        stock: 10
-
+        pages: 1056
     },
     {
         title: "El retrato de Dorian Gray",
@@ -268,9 +238,7 @@ let books = [
         location: "Librería Wilde",
         publication_date: "1890-07-01",
         publisher: "Alianza Editorial",
-        pages: 320,
-        stock: 10
-
+        pages: 320
     },
     {
         title: "El señor de los anillos: La comunidad del anillo",
@@ -285,9 +253,7 @@ let books = [
         location: "Librería Rivendel",
         publication_date: "1954-07-29",
         publisher: "Minotauro",
-        pages: 480,
-        stock: 10
-
+        pages: 480
     },
     {
         title: "La hoguera de las vanidades",
@@ -302,9 +268,7 @@ let books = [
         location: "Librería Wolfe",
         publication_date: "1987-11-01",
         publisher: "Anagrama",
-        pages: 816,
-        stock: 10
-
+        pages: 816
     },
     {
         title: "Anna Karenina",
@@ -319,9 +283,7 @@ let books = [
         location: "Librería Tolstói",
         publication_date: "1877-01-28",
         publisher: "Alba Editorial",
-        pages: 1024,
-        stock: 10
-
+        pages: 1024
     },
     {
         title: "El perfume: historia de un asesino",
@@ -336,118 +298,78 @@ let books = [
         location: "Librería Grenouille",
         publication_date: "1985-01-01",
         publisher: "Seix Barral",
-        pages: 264,
-        stock: 10
-
+        pages: 264
     }
 ];
 
-// Función para mostrar los libros en la tabla
-function displayBooks() {
-    var tableBody = document.getElementById('bookTableBody');
+    // motor de busqueda
 
-    // Limpiar tabla antes de volver a mostrar los libros
-    tableBody.innerHTML = '';
+    const searchInput = document.getElementById('searchInput');
+    const bookList = document.getElementById('bookList');
 
-    // Iterar sobre los libros y crear una fila para cada uno
-    books.forEach(function(book) {
-        var row = document.createElement('tr');
+    function ShowBooks(books) {
+        bookList.innerHTML = '';
+        books.forEach(book => {
+            const bookDiv = document.createElement('div');
+            bookDiv.classList.add('book');
+            bookDiv.innerHTML = `
+                <h2>${book.title}</h2>
+                <p>Autor: ${book.author}</p>
+                <p>Género: ${book.genre}</p>
+                <p>Idioma: ${book.language}</p>
+                <p>Precio: ${book.price}</p>
+                <p>Isbn: ${book.isbn}</p>
+                <p>Editorial: ${book.publisher}</p>   
+                <form action="buy.html">
+                    <button src="buy.html" class="btnBuy" >Comprar</button>      
+                </form>             
+            `;
+            bookList.appendChild(bookDiv);
 
-        // Columna del título
-        var titleCell = document.createElement('td');
-        titleCell.textContent = book.title;
-        row.appendChild(titleCell);
-
-        // Columna del stock
-        var stockCell = document.createElement('td');
-        stockCell.textContent = book.stock;
-        row.appendChild(stockCell);
-
-        // Columna del botón de aumentar stock
-        var increaseStockCell = document.createElement('td');
-        var increaseButton = document.createElement('button');
-        increaseButton.textContent = '+';
-        increaseButton.onclick = function() {
-            book.stock++;
-            stockCell.textContent = book.stock;
-        };
-        increaseStockCell.appendChild(increaseButton);
-        row.appendChild(increaseStockCell);
-
-        // Columna del botón de disminuir stock
-        var decreaseStockCell = document.createElement('td');
-        var decreaseButton = document.createElement('button');
-        decreaseButton.textContent = '-';
-        decreaseButton.onclick = function() {
-            if (book.stock > 0) {
-                book.stock--;
-                stockCell.textContent = book.stock;
-            }
-        };
-        decreaseStockCell.appendChild(decreaseButton);
-        row.appendChild(decreaseStockCell);
-
-        // Agregar la fila a la tabla
-        tableBody.appendChild(row);
-    });
-}
-
-// Llamar a la función para mostrar los libros al cargar la página
-window.onload = displayBooks;
-
-
-
-
-// Función para aumentar el stock de un libro
-function increaseStock(title) {
-    // Buscar el libro por su título en el array
-    var book = books.find(function(book) {
-        return book.title === title;
-    });
-
-    // Si se encuentra el libro, aumentar su stock y guardar los cambios
-    if (book) {
-        book.stock++;
-        saveChanges();
+            const btnBuy = bookDiv.querySelector('.btnBuy');
+            btnBuy.addEventListener('click');
+            });
     }
-}
 
-// Función para disminuir el stock de un libro
-function decreaseStock(title) {
-    // Buscar el libro por su título en el array
-    var book = books.find(function(book) {
-        return book.title === title;
+    searchInput.addEventListener('click', () => {
+        const searchTerm = searchInput.value.toLowerCase();
+        const filteredBooks = books.filter(book =>
+            book.title.toLowerCase().includes(searchTerm) ||
+            book.author.toLowerCase().includes(searchTerm) ||
+            book.genre.toLowerCase().includes(searchTerm) ||
+            book.language.toLowerCase().includes(searchTerm) ||
+            book.publisher.toLowerCase().includes(searchTerm)
+        );
+        ShowBooks(filteredBooks);
     });
+});
 
-    // Si se encuentra el libro y el stock es mayor que 0, disminuir su stock y guardar los cambios
-    if (book && book.stock > 0) {
-        book.stock--;
-        saveChanges();
-    }
+    // formulario
+
+let buybooks = [
+ 
+];
+
+function submit(buybooks) {
+let userName = document.getElementById("name").value
+let userEmail = document.getElementById("email").value
+let userAddress = document.getElementById("address").value
+let userNumber = document.getElementById("number").value
+userNumber= parseInt(userNumber)
+let userDate = new Date()
+
+
+
+  buybooks.push(
+      {
+      date: userDate,
+      name: userName,
+      email: userEmail,
+      address: userAddress,
+      number: userNumber
+      }
+  ) 
 }
 
-// Función para guardar los cambios en el array de libros
-function saveChanges() {
-    // Convertir el array de libros a formato JSON
-    var jsonBooks = JSON.stringify(books);
-
-    // Guardar los libros en el almacenamiento local del navegador
-    localStorage.setItem('books', jsonBooks);
-}
-
-// Función para cargar los libros del almacenamiento local del navegador
-function loadBooks() {
-    var storedBooks = localStorage.getItem('books');
-
-    // Si hay libros almacenados, convertirlos de JSON a objeto y asignarlos a la variable books
-    if (storedBooks) {
-        books = JSON.parse(storedBooks);
-    }
-}
-
-// Llamar a la función para cargar los libros al cargar la página
-window.onload = function() {
-    loadBooks();
-    displayBooks();
-};
-
+console.log(buybooks);
+  

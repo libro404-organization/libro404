@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock de Libros</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h2>Stock de Libros</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Stock</th>
+                <th>Aumentar Stock</th>
+                <th>Disminuir Stock</th>
+            </tr>
+        </thead>
+        <tbody id="bookTableBody">
+            <!-- Aquí se insertarán las filas de los libros -->
+        </tbody>
+    </table>
+    <button onclick="increaseStock('Cien años de soledad')">+</button>
+    <button onclick="decreaseStock('Cien años de soledad')">-</button>
+    
+  
+
+    <script src="app5.js"></script>
+</body>
+</html>
