@@ -306,19 +306,19 @@ let books1  = JSON.parse(localStorage.getItem('books1')) || [
 
 
 
-const searchInput = document.getElementById('searchInput');
-const bookList = document.getElementById('bookList');
+let searchInput = document.getElementById('searchInput');
+let bookList = document.getElementById('bookList');
 
 function ShowBooks(books1) {
     bookList.innerHTML = '';
 
     if (books1.length === 0) {
-        const noResultsMessage = document.createElement('p');
+        let noResultsMessage = document.createElement('p');
         noResultsMessage.textContent = 'No se encontraron resultados.';
         bookList.appendChild(noResultsMessage);
     } else {
         books1.forEach((book, index) => {
-            const bookDiv = document.createElement('div');
+            let bookDiv = document.createElement('div');
             bookDiv.classList.add('book');
             bookDiv.innerHTML = `
                 <h2>${book.title}</h2>
@@ -333,10 +333,10 @@ function ShowBooks(books1) {
             bookList.appendChild(bookDiv);
         });
 
-        const removeBtns = document.querySelectorAll('.remove-btn');
+        let removeBtns = document.querySelectorAll('.remove-btn');
         removeBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                const index = btn.dataset.index;
+                let index = btn.dataset.index;
                 books1.splice(index, 1);
                 localStorage.setItem('books', JSON.stringify(books1));
                 ShowBooks(books1);
@@ -346,8 +346,8 @@ function ShowBooks(books1) {
 }
 
 searchInput.addEventListener('input', () => {
-    const searchTerm = searchInput.value.toLowerCase();
-    const filteredBooks = books1.filter(book =>
+    let searchTerm = searchInput.value.toLowerCase();
+    let filteredBooks = books1.filter(book =>
         book.title.toLowerCase().includes(searchTerm) ||
         book.author.toLowerCase().includes(searchTerm) ||
         book.genre.toLowerCase().includes(searchTerm) ||
