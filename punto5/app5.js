@@ -342,6 +342,7 @@ let books = [
     }
 ];
 
+
 // Función para mostrar los libros en la tabla
 function displayBooks() {
     var tableBody = document.getElementById('bookTableBody');
@@ -358,6 +359,16 @@ function displayBooks() {
         titleCell.textContent = book.title;
         row.appendChild(titleCell);
 
+        // Columna del autor
+        var authorCell = document.createElement('td');
+        authorCell.textContent = book.author;
+        row.appendChild(authorCell);
+
+        // Columna del género
+        var genreCell = document.createElement('td');
+        genreCell.textContent = book.genre;
+        row.appendChild(genreCell);
+
         // Columna del stock
         var stockCell = document.createElement('td');
         stockCell.textContent = book.stock;
@@ -368,7 +379,7 @@ function displayBooks() {
         var increaseButton = document.createElement('button');
         increaseButton.textContent = '+';
         increaseButton.onclick = function() {
-            book.stock++;
+            increaseStock(book.title);
             stockCell.textContent = book.stock;
         };
         increaseStockCell.appendChild(increaseButton);
@@ -379,10 +390,8 @@ function displayBooks() {
         var decreaseButton = document.createElement('button');
         decreaseButton.textContent = '-';
         decreaseButton.onclick = function() {
-            if (book.stock > 0) {
-                book.stock--;
-                stockCell.textContent = book.stock;
-            }
+            decreaseStock(book.title);
+            stockCell.textContent = book.stock;
         };
         decreaseStockCell.appendChild(decreaseButton);
         row.appendChild(decreaseStockCell);
@@ -392,20 +401,12 @@ function displayBooks() {
     });
 }
 
-// Llamar a la función para mostrar los libros al cargar la página
-window.onload = displayBooks;
-
-
-
-
 // Función para aumentar el stock de un libro
 function increaseStock(title) {
-    // Buscar el libro por su título en el array
     var book = books.find(function(book) {
         return book.title === title;
     });
 
-    // Si se encuentra el libro, aumentar su stock y guardar los cambios
     if (book) {
         book.stock++;
         saveChanges();
@@ -414,12 +415,10 @@ function increaseStock(title) {
 
 // Función para disminuir el stock de un libro
 function decreaseStock(title) {
-    // Buscar el libro por su título en el array
     var book = books.find(function(book) {
         return book.title === title;
     });
 
-    // Si se encuentra el libro y el stock es mayor que 0, disminuir su stock y guardar los cambios
     if (book && book.stock > 0) {
         book.stock--;
         saveChanges();
@@ -428,18 +427,13 @@ function decreaseStock(title) {
 
 // Función para guardar los cambios en el array de libros
 function saveChanges() {
-    // Convertir el array de libros a formato JSON
     var jsonBooks = JSON.stringify(books);
-
-    // Guardar los libros en el almacenamiento local del navegador
     localStorage.setItem('books', jsonBooks);
 }
 
 // Función para cargar los libros del almacenamiento local del navegador
 function loadBooks() {
     var storedBooks = localStorage.getItem('books');
-
-    // Si hay libros almacenados, convertirlos de JSON a objeto y asignarlos a la variable books
     if (storedBooks) {
         books = JSON.parse(storedBooks);
     }
@@ -450,4 +444,3 @@ window.onload = function() {
     loadBooks();
     displayBooks();
 };
-
