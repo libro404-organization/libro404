@@ -341,42 +341,31 @@ let books = [
 
     }
 ];
-
-
-// Función para mostrar los libros en la tabla
 function displayBooks() {
-    var tableBody = document.getElementById('bookTableBody');
-
-    // Limpiar tabla antes de volver a mostrar los libros
+    let tableBody = document.getElementById('bookTableBody');
     tableBody.innerHTML = '';
 
-    // Iterar sobre los libros y crear una fila para cada uno
     books.forEach(function(book) {
-        var row = document.createElement('tr');
+        let row = document.createElement('tr');
 
-        // Columna del título
-        var titleCell = document.createElement('td');
+        let titleCell = document.createElement('td');
         titleCell.textContent = book.title;
         row.appendChild(titleCell);
 
-        // Columna del autor
-        var authorCell = document.createElement('td');
+        let authorCell = document.createElement('td');
         authorCell.textContent = book.author;
         row.appendChild(authorCell);
 
-        // Columna del género
-        var genreCell = document.createElement('td');
+        let genreCell = document.createElement('td');
         genreCell.textContent = book.genre;
         row.appendChild(genreCell);
 
-        // Columna del stock
-        var stockCell = document.createElement('td');
+        let stockCell = document.createElement('td');
         stockCell.textContent = book.stock;
         row.appendChild(stockCell);
 
-        // Columna del botón de aumentar stock
-        var increaseStockCell = document.createElement('td');
-        var increaseButton = document.createElement('button');
+        let increaseStockCell = document.createElement('td');
+        let increaseButton = document.createElement('button');
         increaseButton.textContent = '+';
         increaseButton.onclick = function() {
             increaseStock(book.title);
@@ -385,9 +374,8 @@ function displayBooks() {
         increaseStockCell.appendChild(increaseButton);
         row.appendChild(increaseStockCell);
 
-        // Columna del botón de disminuir stock
-        var decreaseStockCell = document.createElement('td');
-        var decreaseButton = document.createElement('button');
+        let decreaseStockCell = document.createElement('td');
+        let decreaseButton = document.createElement('button');
         decreaseButton.textContent = '-';
         decreaseButton.onclick = function() {
             decreaseStock(book.title);
@@ -396,14 +384,12 @@ function displayBooks() {
         decreaseStockCell.appendChild(decreaseButton);
         row.appendChild(decreaseStockCell);
 
-        // Agregar la fila a la tabla
         tableBody.appendChild(row);
     });
 }
 
-// Función para aumentar el stock de un libro
 function increaseStock(title) {
-    var book = books.find(function(book) {
+    let book = books.find(function(book) {
         return book.title === title;
     });
 
@@ -413,9 +399,8 @@ function increaseStock(title) {
     }
 }
 
-// Función para disminuir el stock de un libro
 function decreaseStock(title) {
-    var book = books.find(function(book) {
+    let book = books.find(function(book) {
         return book.title === title;
     });
 
@@ -425,21 +410,18 @@ function decreaseStock(title) {
     }
 }
 
-// Función para guardar los cambios en el array de libros
 function saveChanges() {
-    var jsonBooks = JSON.stringify(books);
+    let jsonBooks = JSON.stringify(books);
     localStorage.setItem('books', jsonBooks);
 }
 
-// Función para cargar los libros del almacenamiento local del navegador
 function loadBooks() {
-    var storedBooks = localStorage.getItem('books');
+    let storedBooks = localStorage.getItem('books');
     if (storedBooks) {
         books = JSON.parse(storedBooks);
     }
 }
 
-// Llamar a la función para cargar los libros al cargar la página
 window.onload = function() {
     loadBooks();
     displayBooks();

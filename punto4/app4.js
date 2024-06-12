@@ -303,45 +303,38 @@ let books = [
 
 
 
-// Función para generar las opciones del select
 function generarOpciones() {
-    var select = document.getElementById('bookSelect');
+    let select = document.getElementById('bookSelect');
     books.forEach(function(libro, index) {
-        var option = document.createElement('option');
+        let option = document.createElement('option');
         option.value = index;
         option.textContent = libro.title;
         select.appendChild(option);
     });
 }
 
-// Función para modificar el publisher del libro seleccionado
 function modificarPublisher() {
-    var select = document.getElementById('bookSelect');
-    var index = select.options[select.selectedIndex].value;
-    var nuevoPublisher = document.getElementById('nuevoPublisherInput').value;
-    
-    // Validar que se haya seleccionado un libro
+    let select = document.getElementById('bookSelect');
+    let index = select.options[select.selectedIndex].value;
+    let nuevoPublisher = document.getElementById('nuevoPublisherInput').value;
+
     if (index === '') {
         alert('Por favor, seleccione un libro.');
         return;
     }
-    
-    // Modificar el publisher del libro seleccionado
-    var libro = books[index];
-    var publisherAnterior = libro.publisher;
+
+    let libro = books[index];
+    let publisherAnterior = libro.publisher;
     libro.publisher = nuevoPublisher;
 
-    // Mostrar el cambio realizado
     mostrarCambio(publisherAnterior, nuevoPublisher);
 }
 
-// Función para mostrar el cambio realizado
 function mostrarCambio(publisherAnterior, nuevoPublisher) {
-    var cambioHechoDiv = document.getElementById('cambioHecho');
+    let cambioHechoDiv = document.getElementById('cambioHecho');
     cambioHechoDiv.textContent = 'El publisher ha sido cambiado de "' + publisherAnterior + '" a "' + nuevoPublisher + '".';
 }
 
-// Llamar a la función para generar las opciones del select al cargar la página
 window.onload = function() {
     generarOpciones();
 };
@@ -369,41 +362,3 @@ window.onload = function() {
 
 
 
-
-
-
-
-// // Función para generar las opciones del select
-// function generarOpciones() {
-//     var select = document.getElementById('bookSelect');
-//     books.forEach(function(libro, index) {
-//         var option = document.createElement('option');
-//         option.value = index;
-//         option.textContent = libro.title;
-//         select.appendChild(option);
-//     });
-// }
-
-// // Función para modificar el publisher del libro seleccionado
-// function modificarPublisher() {
-//     var select = document.getElementById('bookSelect');
-//     var index = select.value;
-//     var nuevoPublisher = document.getElementById('nuevoPublisherInput').value;
-    
-//     // Validar que se haya seleccionado un libro
-//     if (index === '') {
-//         alert('Por favor, seleccione un libro.');
-//         return;
-//     }
-    
-//     // Modificar el publisher del libro seleccionado
-//     books[index].publisher = nuevoPublisher;
-
-//     // Mostrar el arreglo modificado en la consola
-//     console.log(books);
-// }
-
-// // Llamar a la función para generar las opciones del select al cargar la página
-// window.onload = function() {
-//     generarOpciones();
-// };
