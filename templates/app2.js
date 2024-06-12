@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-let books = [
+let books1  = JSON.parse(localStorage.getItem('books1')) || [
+   
     {
-        title: "Cien años de soledad",
+        title: "Cien (100) años de soledad",
         author: "Gabriel García Márquez",
         genre: "Ficción",
         language: "Español",
@@ -305,13 +306,18 @@ let books = [
 
 
 
+const searchInput = document.getElementById('searchInput');
+const bookList = document.getElementById('bookList');
 
-    const searchInput = document.getElementById('searchInput');
-    const bookList = document.getElementById('bookList');
+function ShowBooks(books1) {
+    bookList.innerHTML = '';
 
-    function ShowBooks(books) {
-        bookList.innerHTML = '';
-        books.forEach(book => {
+    if (books1.length === 0) {
+        const noResultsMessage = document.createElement('p');
+        noResultsMessage.textContent = 'No se encontraron resultados.';
+        bookList.appendChild(noResultsMessage);
+    } else {
+        books1.forEach((book, index) => {
             const bookDiv = document.createElement('div');
             bookDiv.classList.add('book');
             bookDiv.innerHTML = `
@@ -322,27 +328,36 @@ let books = [
                 <p>Precio: ${book.price}</p>
                 <p>Isbn: ${book.isbn}</p>
                 <p>Editorial: ${book.publisher}</p>
-                <button class="remove-btn">Eliminar</button>
+                <button class="remove-btn" data-index="${index}">Eliminar</button>
             `;
             bookList.appendChild(bookDiv);
+        });
 
-            const removeBtn = bookDiv.querySelector('.remove-btn');
-            removeBtn.addEventListener('click', () => {
-                bookDiv.remove();
+        const removeBtns = document.querySelectorAll('.remove-btn');
+        removeBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const index = btn.dataset.index;
+                books1.splice(index, 1);
+                localStorage.setItem('books', JSON.stringify(books1));
+                ShowBooks(books1);
             });
         });
     }
+}
 
-    searchInput.addEventListener('input', () => {
-        const searchTerm = searchInput.value.toLowerCase();
-        const filteredBooks = books.filter(book =>
-            book.title.toLowerCase().includes(searchTerm) ||
-            book.author.toLowerCase().includes(searchTerm) ||
-            book.genre.toLowerCase().includes(searchTerm) ||
-            book.language.toLowerCase().includes(searchTerm) ||
-            book.publisher.toLowerCase().includes(searchTerm)
-        );
-        ShowBooks(filteredBooks);
-    });
+searchInput.addEventListener('input', () => {
+    const searchTerm = searchInput.value.toLowerCase();
+    const filteredBooks = books1.filter(book =>
+        book.title.toLowerCase().includes(searchTerm) ||
+        book.author.toLowerCase().includes(searchTerm) ||
+        book.genre.toLowerCase().includes(searchTerm) ||
+        book.language.toLowerCase().includes(searchTerm) ||
+        book.publisher.toLowerCase().includes(searchTerm)
+    );
+    ShowBooks(filteredBooks);
 });
+
+ShowBooks(books1);
+});
+
 
