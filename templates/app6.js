@@ -300,31 +300,32 @@ let books = [
         pages: 264
     }
 ];
-function discount(books, discountRate) {
+
+let date = new Date()
+let day = date.getDate()
+let month = date.getMonth()+1
+let year = date.getFullYear()
+
+console.log(day, month, year)
+if (day=== 23 && month === 4 && year === 2025) {
+    function discount(books, discountRate) {
+        books.forEach(book => {
+            book.originalPrice = book.price;
+            let discountedPrice = book.price * (1 - discountRate);
+            discountedPrice = Math.round(discountedPrice * 100) / 100;
+            book.price = discountedPrice;
+        });
+    }
+    
+    discount(books, 0.10);
+
     books.forEach(book => {
-        book.originalPrice = book.price;
-        let discountedPrice = book.price * (1 - discountRate);
-        discountedPrice = Math.round(discountedPrice * 100) / 100;
-        book.price = discountedPrice;
+        console.log(`${book.title}: $${book.price}`);
     });
-}
-
-discount(books, 0.10);
-
-books.forEach(book => {
-    console.log(`${book.title}: $${book.price}`);
-});
-
-function restoreOriginalPrices(books) {
+            
+}else{
     books.forEach(book => {
-        book.price = book.originalPrice;
-        delete book.originalPrice;
+        console.log(`${book.title}: $${book.price}`);
     });
+        
 }
-
-restoreOriginalPrices(books);
-
-books.forEach(book => {
-    console.log(`${book.title}: $${book.price}`);
-});
-
