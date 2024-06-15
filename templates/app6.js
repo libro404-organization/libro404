@@ -300,40 +300,31 @@ let books = [
         pages: 264
     }
 ];
-const body = document.getElementById('body')
-
-listBooks(books)
-function listBooks(books) {
-  books.forEach((myBook, discount_P) => {
-    discountPrice(myBook,discount_P)
-  });
+function discount(books, discountRate) {
+    books.forEach(book => {
+        book.originalPrice = book.price;
+        let discountedPrice = book.price * (1 - discountRate);
+        discountedPrice = Math.round(discountedPrice * 100) / 100;
+        book.price = discountedPrice;
+    });
 }
 
-function discountPrice(book){
-    let date= new Date()
-    let dayA= date.getDate()
-    let month= date.getMonth() +1
-    let year = date.getFullYear()
-    if(dayA === 7 && month === 6 && year === 2024){
-       let discount_P = books.map((price) => { price - (price*0.10);
-        })
+discount(books, 0.15);
 
-        const myBook = document.createElement('div')
-        myBook.classList.add('book')
-  
-        discount_P = document.createElement('p')
-        discount_P.textContent =  `$ ${book.discount_P}`
-        myBook.appendChild(discount_P)
-        body.appendChild(myBook)
+books.forEach(book => {
+    console.log(`${book.title}: $${book.price}`);
+});
 
-    }else{
-        const myBook = document.createElement('div')
-        myBook.classList.add('book')
-  
-        const price = document.createElement('p')
-        price.textContent =  `$ ${book.price}`
-        myBook.appendChild(price)
-        body.appendChild(myBook)
-    }
+function restoreOriginalPrices(books) {
+    books.forEach(book => {
+        book.price = book.originalPrice;
+        delete book.originalPrice;
+    });
 }
+
+restoreOriginalPrices(books);
+
+books.forEach(book => {
+    console.log(`${book.title}: $${book.price}`);
+});
 
