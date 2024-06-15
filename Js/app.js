@@ -1,5 +1,5 @@
 
-export const books = JSON.parse(localStorage.getItem('books')) || [
+export const books = [
         {
             title: "Cien años de soledad",
             author: "Gabriel García Márquez",
@@ -342,6 +342,10 @@ export const books = JSON.parse(localStorage.getItem('books')) || [
     
         }
     ]
+    
+    export function getBooks() {
+        return books;
+    }
       
 // INICIO 
     
