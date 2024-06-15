@@ -1,18 +1,9 @@
-import { books } from "../Js/app.js"
+import { books } from "./app.js"
+
+//  agregar un nuevo libro
 
 let sectionAddNewBook = document.getElementById('sectionAddNewBook')
 let btnAddNewBook = document.getElementById('btnAddBook')
-let btnModifyPublisher = document.getElementById('btnModifyPublisher')
-
-function options() {
-    let select = document.getElementById('bookSelect')
-    books.forEach(function(libro, index) {
-        let option = document.createElement('option')
-        option.value = index
-        option.textContent = libro.title
-        select.appendChild(option)
-    })
-}
 
 btnAddNewBook.addEventListener('click', function(event) {
     event.preventDefault(books)
@@ -32,10 +23,11 @@ btnAddNewBook.addEventListener('click', function(event) {
     let newPages = parseInt(document.getElementById("pages").value.trim())
     let newStock = parseInt(document.getElementById("stock").value.trim())
     
-    if (!inpTitle || !newAuthor || !newGenre || !newLanguage || !newPrice || !newFormat || !newisbn || !newdescription || !newCondicion || !newLocation || !newPublication_date || !newPublisher || !newPages || !newStock) {
-        alert('Por favor, completa todos los campos.')
-        return
-    }
+    if (!inpTitle || !newAuthor || !newGenre || !newLanguage || !newPrice || !newFormat || !newisbn || !newdescription || !newCondicion || 
+        !newLocation || !newPublication_date || !newPublisher || !newPages || !newStock) {
+            alert('Por favor, completa todos los campos.')
+            return
+        }
 
     books.push({
         title: inpTitle,
@@ -58,33 +50,3 @@ btnAddNewBook.addEventListener('click', function(event) {
     console.log(books)
 })
 
-
-btnModifyPublisher.addEventListener('click', function() {
-    let select = document.getElementById('bookSelect')
-    let index = select.options[select.selectedIndex].value
-    let newPublisher = document.getElementById('newPublisher').value.trim()
-
-    if (index === '') {
-        alert('Por favor, seleccione un libro.')
-        return
-    }
-
-    let libro = books[index]
-    let beforePublisher = libro.publisher
-    libro.publisher = newPublisher
-
-    showChange(beforePublisher, newPublisher)
-})
-
-function showChange(beforePublisher, newPublisher) {
-    let changeDoneDiv = document.getElementById('changeDone')
-    changeDoneDiv.textContent = 'El publisher ha sido cambiado de "' + beforePublisher + '" a "' + newPublisher + '".'
-}
-
-
-window.onload = function() {
-    options(
-
-        
-    )
-}
