@@ -309,7 +309,7 @@ function discount(books, discountRate) {
     });
 }
 
-discount(books, 0.15);
+discount(books, 0.10);
 
 books.forEach(book => {
     console.log(`${book.title}: $${book.price}`);
