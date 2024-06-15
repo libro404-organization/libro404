@@ -35,9 +35,11 @@ btnModifyPublisher.addEventListener('click', function() {
 function showChange(previousPublisher, newPublisher) {
     let changeDoneDiv = document.getElementById('changeDone')
     changeDoneDiv.textContent = 'El publisher ha sido cambiado de "' + previousPublisher + '" a "' + newPublisher + '".'
+    console.log(books)
 }
 
 
 window.onload = function() {
     options()
 }
+

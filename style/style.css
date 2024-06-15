@@ -1,3 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* catalogo */
+.Catalogue-header{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: end;
+    border-bottom: 2.5px solid rgb(187, 136, 65);
+}
+.Catalogue-div-title-nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family:'Gill Sans MT';
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    justify-content: space-around;
+}
+.catalogue-nav-a-special{
+    color: rgb(187, 136, 65);
+}
+
+/* libros */
 #morepag200-div{
     display: flex;
 }
