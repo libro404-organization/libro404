@@ -1,6 +1,7 @@
 
 export const books = [
         {
+            image: '../assents/img/cienAñosDeSoledad.jpeg',
             title: "Cien años de soledad",
             author: "Gabriel García Márquez",
             genre: "Ficción",
@@ -18,6 +19,7 @@ export const books = [
     
         },
         {
+            image: '../assents/img/harryPotter.jpeg',
             title: "Harry Potter y la piedra filosofal",
             author: "J.K. Rowling",
             genre: "Fantasía",
@@ -36,6 +38,7 @@ export const books = [
             
         },
         {
+            image: '../assents/img/1984.jpeg',
             title: "1984",
             author: "George Orwell",
             genre: "Ciencia ficción",
@@ -53,6 +56,7 @@ export const books = [
     
         },
         {
+            image: '../assents/img/orgulloYPrejuicio.jpeg',
             title: "Orgullo y prejuicio",
             author: "Jane Austen",
             genre: "Romance",
@@ -70,6 +74,7 @@ export const books = [
     
         },
         {
+            image: '../assents/img/elHobbit.jpeg',
             title: "El Hobbit",
             author: "J.R.R. Tolkien",
             genre: "Fantasía",
@@ -87,6 +92,7 @@ export const books = [
     
         },
         {
+            image: '../assents/img/elCodigoDaVinci.jpeg',
             title: "El código Da Vinci",
             author: "Dan Brown",
             genre: "Misterio",
@@ -104,6 +110,7 @@ export const books = [
     
         },
         {
+            image: '../assents/img/matarAUnRuiseñor.jpeg',
             title: "Matar a un ruiseñor",
             author: "Harper Lee",
             genre: "Ficción",
@@ -121,6 +128,7 @@ export const books = [
     
         },
         {
+            image: '../assents/img/elAlquimista.jpeg',
             title: "El alquimista",
             author: "Paulo Coelho",
             genre: "Ficción",
@@ -135,9 +143,10 @@ export const books = [
             publisher: "Rayo",
             pages: 208,
             stock: 10
-    
+
         },
         {
+            image: '../assents/img/losPilaresDeLaTierra.jpeg',
             title: "Los pilares de la tierra",
             author: "Ken Follett",
             genre: "Histórica",
@@ -155,6 +164,7 @@ export const books = [
     
         },
         {
+            image: '../assents/img/laSombraDelViento.jpeg',
             title: "La sombra del viento",
             author: "Carlos Ruiz Zafón",
             genre: "Misterio",
@@ -172,6 +182,7 @@ export const books = [
     
         },
         {
+            image: '../assents/img/elPrincipito.jpeg',
             title: "El principito",
             author: "Antoine de Saint-Exupéry",
             genre: "Infantil",
@@ -189,6 +200,7 @@ export const books = [
     
         },
         {
+            image: '../assents/img/laCronicaDeUnaMuerteAnunciada.jpeg',
             title: "Crónica de una muerte anunciada",
             author: "Gabriel García Márquez",
             genre: "Ficción",
@@ -206,6 +218,7 @@ export const books = [
     
         },
         {
+            image: '../assents/img/laCiudadYLosPerros.jpeg',
             title: "La ciudad y los perros",
             author: "Mario Vargas Llosa",
             genre: "Ficción",
@@ -223,6 +236,7 @@ export const books = [
     
         },
         {
+            image: '../assents/img/elNombreDelViento.jpeg',
             title: "El nombre del viento",
             author: "Patrick Rothfuss",
             genre: "Fantasía",
@@ -240,6 +254,7 @@ export const books = [
     
         },
         {
+            image: '../assents/img/donQuijoDeLaMancha.jpeg',
             title: "Don Quijote de la Mancha",
             author: "Miguel de Cervantes",
             genre: "Clásico",
@@ -257,6 +272,7 @@ export const books = [
     
         },
         {
+            image: '../assents/img/elRetratoDeDorianGray.jpeg',
             title: "El retrato de Dorian Gray",
             author: "Oscar Wilde",
             genre: "Clásico",
@@ -274,6 +290,7 @@ export const books = [
     
         },
         {
+            image: '../assents/img/elSeñorDeLosAnillos_laComunidadDelAnillo.jpeg',
             title: "El señor de los anillos: La comunidad del anillo",
             author: "J.R.R. Tolkien",
             genre: "Fantasía",
@@ -291,6 +308,7 @@ export const books = [
     
         },
         {
+            image: '../assents/img/laHogueraDeLasVanidades.jpeg',
             title: "La hoguera de las vanidades",
             author: "Tom Wolfe",
             genre: "Drama",
@@ -308,6 +326,7 @@ export const books = [
     
         },
         {
+            image: '../assents/img/annaKarenina.jpeg',
             title: "Anna Karenina",
             author: "León Tolstói",
             genre: "Clásico",
@@ -325,6 +344,7 @@ export const books = [
     
         },
         {
+            image: '../assents/img/perfume.jpeg',
             title: "El perfume: historia de un asesino",
             author: "Patrick Süskind",
             genre: "Ficción",

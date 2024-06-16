@@ -13,16 +13,19 @@
              const bookDiv = document.createElement('div')
              bookDiv.classList.add('book')
              bookDiv.innerHTML = `
-                 <h2>${book.title}</h2>
-                 <p>Autor: ${book.author}</p>
-                 <p>Género: ${book.genre}</p>
-                 <p>Paginas: ${book.pages}</p>
-                 <div id="morepag200-div">
-                     <p>Precio: $${book.price}</p> 
-                     <form action="templates/joinUs.html">
-                         <button>Comprar</button>      
-                     </form>
-                 </div>             
+                <div id='catalogue-section-books-div'>
+                    <img id="catalogue-section-books-div-img" src="${book.image}" alt="img${book.image}">
+                    <h2 id="catalogue-section-books-div-h2">${book.title}</h2>
+                    <p>Autor: ${book.author}</p>
+                    <p>Género: ${book.genre}</p>
+                    <p>Paginas: ${book.pages}</p>
+                    <div id="morepag200-div">
+                        <p>Precio: $${book.price}</p> 
+                        <form action="templates/joinUs.html">
+                            <button>Comprar</button>      
+                        </form>
+                    </div>
+                 </div>
              `
              bookList.appendChild(bookDiv)
          })
