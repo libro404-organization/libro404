@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* catalogo */
+body{
+    padding: 20px 60px;
+    font-family:'Gill Sans MT';
+}
+.Catalogue-header{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: end;
+    border-bottom: 2.5px solid rgb(187, 136, 65);
+    height: auto;
+}
+.Catalogue-div-title-nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    justify-content: space-around;
+}
+.catalogue-nav-a-special{
+    color: rgb(187, 136, 65);
+}
+.catalogue-section-search{
+    margin: 10px 0px;
+    padding: 20px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../assents/img/backgroundCatalogue.png);
+    background-size: auto;
+    color: white;
+}
+.catalogue-section-books{
+    display: flex;
+    justify-content: space-around;
+}
+#catalogue-section-div-btn{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 300px;
+}
+button{
+    background-color: rgb(187, 136, 65);
+}
+#catalogue-section-books-div{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin: 0px 20px;
+}
+#catalogue-section-books-div-img{
+    height: 300px;
+    width: 200px;
+}
+#catalogue-section-books-div-h2{
+    width: auto;
+}
+#bookList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: auto;
+}
+/* libros */
+#morepag200-div{
+    display: flex;
+}
+
+#publisherstyle{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+#publisherstyle input{
+   margin-bottom: 10px;
+   margin-top: 10px;
+}
+
+
