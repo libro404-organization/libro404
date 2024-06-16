@@ -20,7 +20,7 @@
                     <p>Género: ${book.genre}</p>
                     <p>Paginas: ${book.pages}</p>
                     <div id="morepag200-div">
-                        <p>Precio: $${book.price}</p> 
+                        <p id="catalogue-section-div-p">$${book.price}</p> 
                         <form action="templates/joinUs.html">
                             <button>Comprar</button>      
                         </form>
