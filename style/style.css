@@ -71,6 +71,9 @@ a:hover{
     background-color: rgb(187, 136, 65);
     border: transparent;
 }
+.catalogue-section-books-div-btn-Special:active{
+    background-color: rgba(187, 136, 65, 0.295);
+}
 #catalogue-section-div-btn-buy{
     border-color:rgb(255, 0, 157);
 }
@@ -78,6 +81,9 @@ a:hover{
     color: white;
     background-color: rgb(255, 0, 157);
     border: transparent;
+}
+#catalogue-section-div-btn-buy:active{
+    background-color: rgba(255, 0, 157, 0.295);
 }
 button{
     padding: 10px 40px;
@@ -95,6 +101,9 @@ button{
     background-color: rgb(187, 136, 65);
     color: white;
     border: transparent;
+}
+.btn-backAndOthersActions:active{
+    background-color: rgba(187, 136, 65, 0.295);
 }
 #catalogue-section-books-div{
     margin: 0px 20px; 
@@ -225,4 +234,35 @@ h3{
     border-radius: 20px;
     color: white;
     border: 5px solid rgb(214, 131, 14);
+}
+/* nuevo libro */
+.add-Book-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addBook-section{
+    background-color:  rgb(122, 85, 33);
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border: 5px solid  rgb(214, 131, 14);
+    border-radius: 35px;
+}
+.addBook-section-input{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 150px;
+    border: 3px solid  rgb(214, 131, 14);
+    border-radius: 10px;
+}
+
+/* stock */
+
+.stock-books{
+    display: flex;
+    flex-direction: column;
 }

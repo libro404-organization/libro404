@@ -9,14 +9,14 @@ function displayBooks() {
 
     books.forEach(function(book) {
         let rowHtml = `
-            <tr>
+            <div id="stock-books">
                 <td>${book.title}</td>
                 <td>${book.author}</td>
                 <td>${book.genre}</td>
                 <td>${book.stock}</td>
                 <td><button class="btn-backAndOthersActions" onclick="increaseStock('${book.title}')">+</button></td>
                 <td><button class="btn-backAndOthersActions" onclick="decreaseStock('${book.title}')">-</button></td>
-            </tr>
+            </div>
         `
         tableBody.innerHTML += rowHtml
     })
