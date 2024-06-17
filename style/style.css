@@ -157,8 +157,72 @@ footer{
     }
     #catalogue-section-div-btn{
         flex-direction: row;
+        justify-content: center;
     }
     .catalogue-section-books-div-btn-Special{
         width: 220px;
     }
+}
+
+/* ajustes */
+.settings-section{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.settings-section-aside{
+    padding: 10px;
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 1px 1px 5px rgb(187, 136, 65);
+}
+.settings-section-asid-p{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+
+/* eliminar */
+.remove-btn{
+    border-color:rgb(187, 136, 65);
+}
+.remove-btn:hover{
+    background-color: rgb(187, 136, 65);
+    color: white;
+    border: transparent;
+}
+/* unetenos */
+#form{  
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.joinUs-from-inputs{
+    border-radius: 25px;
+    padding: 10px;
+}
+#joinUs-from-inputs-btn{
+   margin-top: 20px;
+}
+#footerSpecial{
+    margin: 10px 0px;
+    padding: 20px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../assents/img/catalogue_Nav.jpeg);
+    background-size: auto;
+    border-radius: 20px;
+    color: white;
+    border: 5px solid rgb(214, 131, 14);
 }
