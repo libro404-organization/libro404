@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>INICIO</title>
+</head>
+<body>
+    <header class="Catalogue-header">
+        <div class="Catalogue-div-title-nav">
+            <h1>LIBRO404</h1>
+            <nav>
+                <a class="catalogue-nav-a-special" href="index.html">Inicio</a>
+                <a href="templates/settings.html">Ajustes</a>
+                <a href="templates/joinUs.html">Unetenos</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        
+        <section class="catalogue-section-search">
+            <h2 id="catalogue-nav-h2">Nuestro Catalogo</h2>
+            <input type="text" id="searchInput" placeholder="buscar...">
+        </section>
+
+        <section class="catalogue-section-books">
+
+            <div id="catalogue-section-div-btn">
+                <button class="catalogue-section-books-div-btn-Special" id="btnAz">A-Z</button>
+                <button class="catalogue-section-books-div-btn-Special" id="btnZa">Z-A</button>
+                <button class="catalogue-section-books-div-btn-Special" id="btnExpensive">Los 5 libros más costoso</button>
+                <button class="catalogue-section-books-div-btn-Special" id="btnPrice"> $80000 - $30000 COP</button>
+                <button class="catalogue-section-books-div-btn-Special" id="btnPage">Más de 200 páginas</button>
+            </div>
+
+            <div id="bookList"></div>
+
+        </section>
+    </main>
+    <footer></footer>
+    <script type="module" src="Js/appIdex.js"></script>
+</body>
+</html>

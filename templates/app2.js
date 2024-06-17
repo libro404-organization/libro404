@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-let books1  = JSON.parse(localStorage.getItem('books1')) || [
+let books2  = JSON.parse(localStorage.getItem('books2')) || [
    
     {
         title: "Cien (100) años de soledad",
@@ -309,15 +309,15 @@ let books1  = JSON.parse(localStorage.getItem('books1')) || [
 let searchInput = document.getElementById('searchInput');
 let bookList = document.getElementById('bookList');
 
-function ShowBooks(books1) {
+function ShowBooks(books2) {
     bookList.innerHTML = '';
 
-    if (books1.length === 0) {
+    if (books2.length === 0) {
         let noResultsMessage = document.createElement('p');
         noResultsMessage.textContent = 'No se encontraron resultados.';
         bookList.appendChild(noResultsMessage);
     } else {
-        books1.forEach((book, index) => {
+        books2.forEach((book, index) => {
             let bookDiv = document.createElement('div');
             bookDiv.classList.add('book');
             bookDiv.innerHTML = `
@@ -337,9 +337,9 @@ function ShowBooks(books1) {
         removeBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 let index = btn.dataset.index;
-                books1.splice(index, 1);
-                localStorage.setItem('books', JSON.stringify(books1));
-                ShowBooks(books1);
+                books2.splice(index, 10);
+                localStorage.setItem('books', JSON.stringify(books2));
+                ShowBooks(books2);
             });
         });
     }
@@ -347,7 +347,7 @@ function ShowBooks(books1) {
 
 searchInput.addEventListener('input', () => {
     let searchTerm = searchInput.value.toLowerCase();
-    let filteredBooks = books1.filter(book =>
+    let filteredBooks = books2.filter(book =>
         book.title.toLowerCase().includes(searchTerm) ||
         book.author.toLowerCase().includes(searchTerm) ||
         book.genre.toLowerCase().includes(searchTerm) ||
@@ -357,7 +357,7 @@ searchInput.addEventListener('input', () => {
     ShowBooks(filteredBooks);
 });
 
-ShowBooks(books1);
+ShowBooks(books2);
 });
 
 

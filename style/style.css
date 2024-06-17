@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* catalogo */
+body{
+    padding: 20px 60px;
+    font-family:'Gill Sans MT';
+    background-color: whitesmoke;
+}
+.Catalogue-header{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: end;
+    border-bottom: 2.5px solid rgb(187, 136, 65);
+}
+.Catalogue-div-title-nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#catalogue-nav-h2{
+    font-size: 80px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    justify-content: space-around;
+}
+a:hover{
+    color: rgb(122, 85, 33);
+}
+.catalogue-section-books-div-btn-Special:hover{
+    color: white;
+    background-color: rgb(187, 136, 65);
+    border: transparent;
+}
+button:hover{
+    color: white;
+    background-color: rgb(255, 0, 157);
+    border: transparent;
+}
+.catalogue-nav-a-special{
+    color: rgb(187, 136, 65);
+}
+.catalogue-section-search{
+    margin: 10px 0px;
+    padding: 20px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../assents/img/backgroundCatalogue.png);
+    background-size: auto;
+    border-radius: 20px;
+    color: white;
+    border: 5px solid rgb(214, 131, 14);
+}
+.catalogue-section-books{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+#catalogue-section-div-btn{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 300px;
+}
+.catalogue-section-books-div-btn-Special{
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 320px;
+    font-size: 18px;
+}
+button{
+    padding: 10px 40px;
+    border-radius: 25px;
+    background-color: white;
+    border-color:rgb(187, 136, 65);
+}
+#catalogue-section-books-div{
+    margin: 0px 20px; 
+    margin-bottom: 45px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+#catalogue-section-books-div-img{
+    height: 300px;
+    width: 200px;
+}
+#catalogue-section-books-div-h2{
+    width: auto;
+}
+#bookList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: auto;
+}
+#catalogue-section-div-p{
+    color: rgb(255, 0, 157);
+}
+/* libros */
+#morepag200-div{
+    display: flex;
+}
