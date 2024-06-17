@@ -1,4 +1,4 @@
- import { books } from "./app.js"
+import { books } from "./app.js"
 
 // INICIO 
     
@@ -19,11 +19,11 @@
                     <p>Autor: ${book.author}</p>
                     <p>Género: ${book.genre}</p>
                     <p>Paginas: ${book.pages}</p>
+                    <p id="catalogue-section-div-p">$${book.price}</p> 
                     <div id="morepag200-div">
-                        <p id="catalogue-section-div-p">$${book.price}</p> 
                         <form action="templates/joinUs.html">
                             <button id="catalogue-section-div-btn-buy">Comprar</button>      
-                        </form>
+                        </form> 
                     </div>
                  </div>
              `
@@ -115,5 +115,42 @@
     }
         discount(books, 0.10)  
     }
+ 
+    let btnMore = document.getElementById('btnMore')
+
+    btnMore.addEventListener('click', showExtra)
+    
+   function showExtra() {
+    bookList.innerHTML = ''
+    books.forEach(book => {
+        const bookDiv = document.createElement('div')
+        bookDiv.classList.add('book')
+        bookDiv.innerHTML = `
+           <div id='catalogue-section-books-div'>
+               <img id="catalogue-section-books-div-img" src="${book.image}" alt="img${book.image}">
+               <h2 id="catalogue-section-books-div-h2">${book.title}</h2>
+               <p>Autor: ${book.author}</p>
+               <p>Género: ${book.genre}</p>
+               <p>Idioma: ${book.language}</p>
+               <p>Formato: ${book.format}</p>
+               <p>Isbn: ${book.isbn}</p>
+               <p>Descripcion: ${book.description}</p>
+               <p>Estado: ${book.condition}</p>
+               <p>Ubicación: ${book.location}</p>
+               <p>Fecha de publicación: ${book.publication_date}</p>
+               <p>Stock: ${book.stock}</p>
+               <p>Editorial: ${book.publisher}</p>
+               <p>Paginas: ${book.pages}</p>
+               <div id="morepag200-div">
+               <form action="templates/joinUs.html">
+                    <p id="catalogue-section-div-p">$${book.price}</p> 
+                    <button id="catalogue-section-div-btn-buy">Comprar</button>      
+                   </form>    
+               </div>
+            </div>
+        `
+        bookList.appendChild(bookDiv)
+    })
+   } 
  
  
