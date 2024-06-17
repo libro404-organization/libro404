@@ -20,9 +20,9 @@
                     <p>Género: ${book.genre}</p>
                     <p>Paginas: ${book.pages}</p>
                     <div id="morepag200-div">
-                        <p>Precio: $${book.price}</p> 
+                        <p id="catalogue-section-div-p">$${book.price}</p> 
                         <form action="templates/joinUs.html">
-                            <button>Comprar</button>      
+                            <button id="catalogue-section-div-btn-buy">Comprar</button>      
                         </form>
                     </div>
                  </div>
@@ -99,6 +99,21 @@
          let filteredBooks = books.filter(book => book.pages > 200)
          showBookCatalogue(filteredBooks)
      }
- 
+     
+    //  offerta
+    let date = new Date()
+    let day = date.getDate()
+    let month = date.getMonth()+1
+    let year = date.getFullYear()
+
+    if (day === 16 && month === 6 && year === year || day === 17 && month === 6 && year === year) {
+        function discount(books, discountRate) {
+            books.forEach(book => {
+                book.price = book.price - (book.price * discountRate)
+                showBookCatalogue(books)
+            })
+    }
+        discount(books, 0.10)  
+    }
  
  

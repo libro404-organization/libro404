@@ -1,12 +1,15 @@
  // UNETENOS 
         // formulario
-    
-        let buybooks = [
+        const buybooks = [
      
         ];
+  
         let form = document.getElementById('form')
-    
-        function submitbuybooks(buybooks) {
+        let btnBuyBooks = document.getElementById('joinUs-from-inputs-btn')
+
+        btnBuyBooks.addEventListener('click', submitbuybooks)
+
+        function submitbuybooks() {
         let userName = document.getElementById("name").value
         let userEmail = document.getElementById("email").value
         let userAddress = document.getElementById("address").value

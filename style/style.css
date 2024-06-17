@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* catalogo */
+body{
+    padding: 20px 60px;
+    font-family:'Gill Sans MT';
+    background-color: whitesmoke;
+}
+.Catalogue-header{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: end;
+    border-bottom: 2.5px solid rgb(187, 136, 65);
+}
+.Catalogue-div-title-nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#catalogue-nav-h2{
+    font-size: 80px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    justify-content: space-around;
+}
+a:hover{
+    color: rgb(122, 85, 33);
+}
+.catalogue-nav-a-special{
+    color: rgb(187, 136, 65);
+}
+.catalogue-section-search{
+    margin: 10px 0px;
+    padding: 20px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../assents/img/backgroundCatalogue.png);
+    background-size: auto;
+    border-radius: 20px;
+    color: white;
+    border: 5px solid rgb(214, 131, 14);
+}
+.catalogue-section-books{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+#catalogue-section-div-btn{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.catalogue-section-books-div-btn-Special{
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 320px;
+    font-size: 18px;
+}
+.catalogue-section-books-div-btn-Special:hover{
+    color: white;
+    background-color: rgb(187, 136, 65);
+    border: transparent;
+}
+#catalogue-section-div-btn-buy{
+    border-color:rgb(255, 0, 157);
+}
+#catalogue-section-div-btn-buy:hover{
+    color: white;
+    background-color: rgb(255, 0, 157);
+    border: transparent;
+}
+button{
+    padding: 10px 40px;
+    border-radius: 25px;
+    background-color: white;
+    border-color:rgb(214, 131, 14);
+}
+.btn-backAndOthersActions{
+    padding: 10px 40px;
+    border-radius: 25px;
+    background-color: white;
+    border-color:rgb(187, 136, 65);
+}
+.btn-backAndOthersActions:hover{
+    background-color: rgb(187, 136, 65);
+    color: white;
+    border: transparent;
+}
+#catalogue-section-books-div{
+    margin: 0px 20px; 
+    margin-bottom: 45px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+#catalogue-section-books-div-img{
+    height: 300px;
+    width: 200px;
+}
+#catalogue-section-books-div-h2{
+    width: auto;
+}
+#bookList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: auto;
+}
+#catalogue-section-div-p{
+    color: rgb(255, 0, 157);
+    font-size: 20px;
+}
+/* motor de busqueda */
+#searchInput{
+    padding-left: 5px;
+    width: 400px;
+    height: 30px;
+    border-radius: 25px;
+    border: transparent;
+    font-family:'Gill Sans MT';
+    font-size: 20px;
+}
+/* libros */
+#morepag200-div{
+    display: flex;
+    justify-content: space-between;
+}
+/* footer */
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* mediacueris */
+
+@media screen and (max-width: 680px){
+    #catalogue-nav-h2{
+        font-size: 50px;
+    }
+    #searchInput{
+        width: 200px;
+    }
+    .catalogue-section-books{
+        flex-direction: column;
+    }
+    #catalogue-section-div-btn{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .catalogue-section-books-div-btn-Special{
+        width: 220px;
+    }
+}
+
+/* ajustes */
+.settings-section{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.settings-section-aside{
+    padding: 10px;
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 1px 1px 5px rgb(187, 136, 65);
+}
+.settings-section-asid-p{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+
+/* eliminar */
+.remove-btn{
+    border-color:rgb(187, 136, 65);
+}
+.remove-btn:hover{
+    background-color: rgb(187, 136, 65);
+    color: white;
+    border: transparent;
+}
+/* unetenos */
+#form{  
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.joinUs-from-inputs{
+    border-radius: 25px;
+    padding: 10px;
+}
+#joinUs-from-inputs-btn{
+   margin-top: 20px;
+}
+#footerSpecial{
+    margin: 10px 0px;
+    padding: 20px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../assents/img/catalogue_Nav.jpeg);
+    background-size: auto;
+    border-radius: 20px;
+    color: white;
+    border: 5px solid rgb(214, 131, 14);
+}
