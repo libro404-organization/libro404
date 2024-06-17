@@ -14,8 +14,8 @@ function displayBooks() {
                 <td>${book.author}</td>
                 <td>${book.genre}</td>
                 <td>${book.stock}</td>
-                <td><button onclick="increaseStock('${book.title}')">+</button></td>
-                <td><button onclick="decreaseStock('${book.title}')">-</button></td>
+                <td><button class="btn-backAndOthersActions" onclick="increaseStock('${book.title}')">+</button></td>
+                <td><button class="btn-backAndOthersActions" onclick="decreaseStock('${book.title}')">-</button></td>
             </tr>
         `
         tableBody.innerHTML += rowHtml

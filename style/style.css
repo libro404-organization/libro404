@@ -24,7 +24,6 @@ body{
 #catalogue-nav-h2{
     font-size: 80px;
 }
-
 a{
     text-decoration: none;
     color: black;
@@ -33,16 +32,6 @@ a{
 }
 a:hover{
     color: rgb(122, 85, 33);
-}
-.catalogue-section-books-div-btn-Special:hover{
-    color: white;
-    background-color: rgb(187, 136, 65);
-    border: transparent;
-}
-button:hover{
-    color: white;
-    background-color: rgb(255, 0, 157);
-    border: transparent;
 }
 .catalogue-nav-a-special{
     color: rgb(187, 136, 65);
@@ -70,7 +59,6 @@ button:hover{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 300px;
 }
 .catalogue-section-books-div-btn-Special{
     margin-bottom: 20px;
@@ -78,11 +66,35 @@ button:hover{
     width: 320px;
     font-size: 18px;
 }
+.catalogue-section-books-div-btn-Special:hover{
+    color: white;
+    background-color: rgb(187, 136, 65);
+    border: transparent;
+}
+#catalogue-section-div-btn-buy{
+    border-color:rgb(255, 0, 157);
+}
+#catalogue-section-div-btn-buy:hover{
+    color: white;
+    background-color: rgb(255, 0, 157);
+    border: transparent;
+}
 button{
     padding: 10px 40px;
     border-radius: 25px;
     background-color: white;
+    border-color:rgb(214, 131, 14);
+}
+.btn-backAndOthersActions{
+    padding: 10px 40px;
+    border-radius: 25px;
+    background-color: white;
     border-color:rgb(187, 136, 65);
+}
+.btn-backAndOthersActions:hover{
+    background-color: rgb(187, 136, 65);
+    color: white;
+    border: transparent;
 }
 #catalogue-section-books-div{
     margin: 0px 20px; 
@@ -107,8 +119,46 @@ button{
 }
 #catalogue-section-div-p{
     color: rgb(255, 0, 157);
+    font-size: 20px;
+}
+/* motor de busqueda */
+#searchInput{
+    padding-left: 5px;
+    width: 400px;
+    height: 30px;
+    border-radius: 25px;
+    border: transparent;
+    font-family:'Gill Sans MT';
+    font-size: 20px;
 }
 /* libros */
 #morepag200-div{
     display: flex;
+    justify-content: space-between;
+}
+/* footer */
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* mediacueris */
+
+@media screen and (max-width: 680px){
+    #catalogue-nav-h2{
+        font-size: 50px;
+    }
+    #searchInput{
+        width: 200px;
+    }
+    .catalogue-section-books{
+        flex-direction: column;
+    }
+    #catalogue-section-div-btn{
+        flex-direction: row;
+    }
+    .catalogue-section-books-div-btn-Special{
+        width: 220px;
+    }
 }
