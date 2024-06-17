@@ -266,3 +266,27 @@ h3{
     display: flex;
     flex-direction: column;
 }
+/* modificar editorial */
+.modify-P-section{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 70vh;
+}
+.modify-P-div{
+    padding: 30px;
+    background-color:  rgb(122, 85, 33);
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    border: 5px solid  rgb(214, 131, 14);
+    border-radius: 25px;
+}
+.modify-P-label{
+    margin-top: 10px;
+}
+.modify-P-input{
+    border: 3px solid  rgb(214, 131, 14);
+    border-radius: 10px;
+    margin: 5px;
+}
