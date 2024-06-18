@@ -44,7 +44,7 @@ a:hover{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url(../assents/img/backgroundCatalogue.png);
+    background-image: url('https://res.cloudinary.com/dqjmizphj/image/upload/v1718737429/backgroundCatalogue_fmnyqi.png');
     background-size: auto;
     border-radius: 20px;
     color: white;
