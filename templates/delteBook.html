@@ -8,20 +8,34 @@
 </head>
 <body>
     <header>
+        <div class="Catalogue-div-title-nav">
+            <h1>LIBRO404</h1>
+            <nav>
+                <a href="../templates/settings.html">Ajustes</a>
+                <a href="../templates/joinUs.html">Unetenos</a>
+            </nav>
+        </div>
 
-        <h1>LIBRO404</h1>
-
-        <form action="settings.html"><button class="btn-backAndOthersActions">volver</button></form>
+        <form action="settings.html"><button>volver</button></form>
     </header>
     <main>
 
-    <section>
-        <input type="text" id="searchInput" placeholder="Buscar...">
+    <section class="catalogue-section-search">
+        <h2 id="catalogue-nav-h2">Eliminar Libro</h2>
+        <input type="text" id="searchInput" placeholder="buscar...">
+    </section>
+
+    <section class="catalogue-section-books">
+
+        
+
         <div id="bookList"></div>
+
     </section>
 
     </main>
     <footer>
+        <p>&copy; book community 404</p>
     </footer>
     <script type="module" src="../Js/appDelteBook.js"></script>
 </body>

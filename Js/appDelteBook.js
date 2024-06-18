@@ -17,15 +17,18 @@ import { books } from "./app.js"
                 let bookDiv = document.createElement('div')
                 bookDiv.classList.add('book')
                 bookDiv.innerHTML = `
-                    <h2>${book.title}</h2>
-                    <p>Autor: ${book.author}</p>
-                    <p>Género: ${book.genre}</p>
-                    <p>Idioma: ${book.language}</p>
-                    <p>Precio: ${book.price}</p>
-                    <p>Isbn: ${book.isbn}</p>
-                    <p>Editorial: ${book.publisher}</p>
-                    <button class="remove-btn" data-index="${index}">Eliminar</button>
-                `
+                    <div id='catalogue-section-books-div'>
+                        <img id="catalogue-section-books-div-img" src="${book.image}" alt="img${book.image}">
+                        <h2>${book.title}</h2>
+                        <p>Autor: ${book.author}</p>
+                        <p>Género: ${book.genre}</p>
+                        <p>Idioma: ${book.language}</p>
+                        <p>Precio: ${book.price}</p>
+                        <p>Isbn: ${book.isbn}</p>
+                        <p>Editorial: ${book.publisher}</p>
+                        <button class="remove-btn" data-index="${index}">Eliminar</button>
+                    </div>    
+                `   
                 bookList.appendChild(bookDiv)
             })
     
