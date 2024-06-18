@@ -1,7 +1,7 @@
 
 export const books = [
         {
-            image: '../assents/img/cienAñosDeSoledad.jpeg',
+            image: 'https://res.cloudinary.com/dqjmizphj/image/upload/v1718737434/cienA%C3%B1osDeSoledad_whdhly.jpg',            
             title: "Cien años de soledad",
             author: "Gabriel García Márquez",
             genre: "Ficción",
