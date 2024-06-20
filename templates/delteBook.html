@@ -4,38 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/style.css">
-    <title>Eliminar</title>
+    <title>Modificar</title>
 </head>
 <body>
     <header>
-        <div class="Catalogue-div-title-nav">
-            <h1>LIBRO404</h1>
-            <nav>
-                <a href="../templates/settings.html">Ajustes</a>
-                <a href="../templates/joinUs.html">Unetenos</a>
-            </nav>
-        </div>
 
-        <form action="settings.html"><button>volver</button></form>
+        <h1>LIBRO404</h1>
+
+        <form action="settings.html"><button class="btn-backAndOthersActions">volver</button></form>
     </header>
     <main>
 
-    <section class="catalogue-section-search">
-        <h2 id="catalogue-nav-h2">Eliminar Libro</h2>
-        <input type="text" id="searchInput" placeholder="buscar...">
-    </section>
-
-    <section class="catalogue-section-books">
-
-        
-
-        <div id="bookList"></div>
-
+    <section class="modify-P-section">
+        <div class="modify-P-div">
+            <label class="modify-P-label" for="bookSelect">Seleccionar Libro:</label>
+            <select class="modify-P-input" class="modify-P-label" id="bookSelect"></select>
+            <button class="btn-backAndOthersActions" id="btnModifyPublisher">Eliminar</button>
+        </div>
+    
+        <div id="changeDone"></div>
     </section>
 
     </main>
     <footer>
-        <p>&copy; book community 404</p>
     </footer>
     <script type="module" src="../Js/appDelteBook.js"></script>
 </body>

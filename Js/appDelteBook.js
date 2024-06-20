@@ -1,57 +1,43 @@
 import { books } from "./app.js"
 
-    // eliminar un libro 
+let btnMoveToLast = document.getElementById('btnModifyPublisher')
 
-    let searchInput = document.getElementById('searchInput')
-    let bookList = document.getElementById('bookList')
-    
-    function ShowBooks(books) {
-        bookList.innerHTML = ''
-    
-        if (books.length === 0) {
-            let noResultsMessage = document.createElement('p')
-            noResultsMessage.textContent = 'No se encontraron resultados.'
-            bookList.appendChild(noResultsMessage)
-        } else {
-            books.forEach((book, index) => {
-                let bookDiv = document.createElement('div')
-                bookDiv.classList.add('book')
-                bookDiv.innerHTML = `
-                    <div id='catalogue-section-books-div'>
-                        <img id="catalogue-section-books-div-img" src="${book.image}" alt="img${book.image}">
-                        <h2>${book.title}</h2>
-                        <p>Autor: ${book.author}</p>
-                        <p>Género: ${book.genre}</p>
-                        <p>Idioma: ${book.language}</p>
-                        <p>Precio: ${book.price}</p>
-                        <p>Isbn: ${book.isbn}</p>
-                        <p>Editorial: ${book.publisher}</p>
-                        <button class="remove-btn" data-index="${index}">Eliminar</button>
-                    </div>    
-                `   
-                bookList.appendChild(bookDiv)
-            })
-    
-            let removeBtns = document.querySelectorAll('.remove-btn')
-            removeBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    let index = btn.dataset.index
-                    books.splice(index, 1)
-                    localStorage.setItem('books', JSON.stringify(books))
-                    ShowBooks(books)
-                })
-            })
-        }
-    }
-    
-    searchInput.addEventListener('input', () => {
-        let searchTerm = searchInput.value.toLowerCase()
-        let filteredBooks = books.filter(book =>
-            book.title.toLowerCase().includes(searchTerm) ||
-            book.author.toLowerCase().includes(searchTerm) ||
-            book.genre.toLowerCase().includes(searchTerm) ||
-            book.language.toLowerCase().includes(searchTerm) ||
-            book.publisher.toLowerCase().includes(searchTerm)
-        )
-        ShowBooks(filteredBooks)
+function options() {
+    let select = document.getElementById('bookSelect')
+    books.forEach(function(book, index) {
+        let option = document.createElement('option')
+        option.value = index
+        option.textContent = book.title
+        select.appendChild(option)
     })
+}
+
+btnMoveToLast.addEventListener('click', function() {
+    let select = document.getElementById('bookSelect')
+    let index = select.options[select.selectedIndex].value
+
+    if (index === '') {
+        alert('Por favor, seleccione un libro.')
+        return
+    }
+
+    let book = books[index]
+
+    books.splice(index, 1)
+
+    books.push(book)
+
+    books.pop()
+    
+    showMoveToLast(book)
+    console.log(books)
+})
+
+function showMoveToLast(book) {
+    let changeDoneDiv = document.getElementById('changeDone')
+    changeDoneDiv.textContent = 'El libro "' + book.title + '" ha sido eliminado.'
+}
+
+window.onload = function() {
+    options()
+}
