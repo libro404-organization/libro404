@@ -231,8 +231,8 @@ h3{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url(../assents/img/catalogue_Nav.jpeg);
-    background-size: auto;
+    background-image: url('https://res.cloudinary.com/dqjmizphj/image/upload/v1718737434/catalogue_Nav_y7tvrm.jpg');
+    background-size: cover;
     border-radius: 20px;
     color: white;
     border: 5px solid rgb(214, 131, 14);
@@ -307,4 +307,11 @@ h3{
 .stock-books{
     display: flex;
     flex-direction: row;
+}
+
+/* frases */
+#showPhrasesBooks{
+    font-size: 25px;
+    text-align: center;
+    font-family: cursive;
 }
