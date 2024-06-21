@@ -113,6 +113,7 @@ button{
     width: 200px;
 }
 #catalogue-section-books-div-img{
+    margin-bottom: 12px;
     height: 300px;
     width: 200px;
 }
@@ -182,6 +183,7 @@ footer{
     flex-wrap: wrap;
 }
 .settings-section-aside{
+    margin: 10px;
     padding: 10px;
     width: 200px;
     height: 300px;
