@@ -15,7 +15,7 @@ export const books = [
             publication_date: "1967-05-30",
             publisher: "Sudamericana",
             pages: 432,
-            stock: 10
+            stock: 15
     
         },
         {
@@ -33,7 +33,7 @@ export const books = [
             publication_date: "1997-06-26",
             publisher: "Salamandra",
             pages: 256,
-            stock: 10
+            stock: 12
     
             
         },
