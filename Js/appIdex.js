@@ -1,9 +1,12 @@
 import { books } from "./app.js"
 
 // INICIO 
-    
-    // catalogo
+
+// catalogo
     const bookList = document.getElementById('bookList')
+    let btnBefore = document.getElementById('btnBefore')
+
+    btnBefore.addEventListener('click', () => { showBookCatalogue(books) })
 
     showBookCatalogue(books)
  
@@ -119,6 +122,7 @@ import { books } from "./app.js"
     let btnMore = document.getElementById('btnMore')
 
     btnMore.addEventListener('click', showExtra)
+    
     
    function showExtra() {
     bookList.innerHTML = ''

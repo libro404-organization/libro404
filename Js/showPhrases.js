@@ -12,9 +12,6 @@ const phrases =  [
         phrase: '"No hay nada más aterrador que un vaso de agua que se mueve por sí solo." - Michael Ende'
     },
     {
-        phrase: '"Las paredes tienen oídos, los pisos tienen ojos y los pensamientos, pensamientos crueles que son la mayoría de las veces, forman las voces. Voces que te guiarán a través de la oscuridad." - Cormac McCarthy'
-    },
-    {
         phrase: '"Todo lo que tenemos que temer es el propio miedo." - Edgar Allan Poe'
     },
     {
